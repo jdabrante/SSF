@@ -19,5 +19,37 @@ Alternativas de RAID:
 - RAID 5E y RAID 6E --> Se deja un disco vacio para cuando un disco falle se comience a usar automáticamente.
 - RAID Anidados --> Se combinan tipos de RAID (Problema espacio)
 *Mismo fabricante, mismo tamaño, misma velocidad, pero distinto lote.
+
+08/11/22
+
+Sistemas de arranque. El arranque se llama booteo.
+BIOS --> Basic, Input, Output, System. Funciona a 16bits y tenían 1MB máximo. Primero eran ROM, luego pasaron a ser Etprom.
+La BIOS hace: 
+
+- POST (Power On Self Text) --> Comprueba los componentes necesarios para iniciar.
+- Gestor de arranque.
+- Cargador del sistema. *Grub hace como gestor de arranque y cargador del sistema*
+- Sector 0 --> Arranque del disco (512b guardados al pricnipio del disco)
+- Master boot record. (MBR)
+- Despues del codigo de arranque va la tabla de partciones (64bits) No se podian tener más de 4 particiones en el disco.
+- 4 Particiones primarias o 3 primarias y una extendida con partes lógicas.
+- Linux puede arrancar desde particiones lógicas. 
+- Con MBR solo veo discos de 2 Teras.
+
+-Protocolo EFI, quita todas las limitacione santeriormente comentados.
+-UEFI --> EFI unificado. Se sigue llamando BIOS pero realmente es una UEFI. UEFI no trabaja con MBR sino con GPT (Guib Partition Table)
+- Si con la UEFI queremos simular la BIOS se debe utilizar la LEGACY OS
+- Secure Boot
+- En la UEFI, la propia EFI...
+- Muchos antiguos son MBR
+
+Virtualización --> v12n --> Los nombres muy largo en informática se escriben con la primera y ultima letra junto con el número de letras que se han comido.
+Hypervisor tipo 1 y tipo 2 (tipo 2 virtualbox, mitad de la máquina para virtualizar)
+
+15/11/22
+
+Computación en la nube
+Hosting y Housing
+XaaS 
   
 </div>
